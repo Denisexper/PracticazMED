@@ -1,0 +1,13 @@
+Mes, Ventas
+Enero, 500
+Febrero, 600
+Marzo, 700
+Abril, 300
+Mayo, 500
+Junio, 700
+Julio, 900
+Agosto, 1000
+Septiembre, 800
+Octubre, 900
+Noviembre, 100
+Diciembe, 1100
