@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="center">
+            <!-- Logo -->
+            <div id="Logo">
+
+                <img src="camisas/logo.webp" class="app-logo" alt="Logotipo">
+                <span id="brand">
+                    <strong>Futbol Champan</strong>
+                </span>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Camisas</a>
+                    </li>
+                    <li>
+                        <a href="./formulario.html">Forrmulario</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- LIMPPIAR FLOATS -->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <div id="slider" class="slider-big slider-medium">
+        <h1>¡Bienvenido al mejor sitio de camisetas de futchibol</h1>
+        <a href="./blog.html" class="btn-white">Ir al blog</a>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="center">
+        <section id="content">
+            <h2 class="subheader">Camisas disponibes</h2>
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="camisas/city.webp" alt="imagen de articulo">
+                    </div>
+                    <h2>camisa </h2>
+                    <span class="date"> Hace 3 dias </span>
+                    <a href="./article.html">Leer más</a>
+                    <div class="clearfix"></div>
+                </article>
+                <!-- MOSTRAR ARTICULOS DESDE JS -->
+            </div>
+        </section>
+
+        <script>
+            window.addEventListener("load", function() {
+                var template = document.getElementById("article-template");
+
+                var articles = document.getElementById("articles");
+                for (let i = 1; i <= 5; i++){
+                    var clonado = template.cloneNode(true);
+                    clonado.removeAttribute("id");
+                    var h2 = clonado.getElementsByTagName("h2")[0];
+                    h2.innerHTML = h2.textContent + " " + i;
+                    articles.appendChild(clonado);
+                }
+            });
+        </script>
+
+        <aside id="sidebar">
+            <div id="nav-log" class="sidebar-item">
+                <h3>Elije tu camise de selecciones</h3>
+                <a href="#" class="btn btn-success">Elije</a>
+            </div>
+
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra la camisa que buscas</p>
+                <form>
+                    <input type="text" name="search">
+                    <input type="submit" name="submit" class="btn" value="Buscar">
+                </form>
+            </div>
+        </aside>
+        <!-- LIMPPIAR FLOATS -->
+        <div class="clearfix"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="center">
+            &copy; Developed by *Denis vasquez*
+        </div>
+    </footer>
+</body>
+
+</html>
